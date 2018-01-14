@@ -1,0 +1,11 @@
+c:\users\alex\source\repos\LennyFace\LennyFace\bin\Debug\LennyFace.exe
+c:\users\alex\source\repos\LennyFace\LennyFace\bin\Debug\LennyFace.pdb
+c:\users\alex\source\repos\LennyFace\LennyFace\obj\Debug\LennyFace.csprojResolveAssemblyReference.cache
+c:\users\alex\source\repos\LennyFace\LennyFace\obj\Debug\LennyFace.csproj.CoreCompileInputs.cache
+c:\users\alex\source\repos\LennyFace\LennyFace\obj\Debug\LennyFace.exe
+c:\users\alex\source\repos\LennyFace\LennyFace\obj\Debug\LennyFace.pdb
+c:\users\alex\source\repos\LennyFace\LennyFace\obj\Debug\LennyFace.Properties.Resources.resources
+c:\users\alex\source\repos\LennyFace\LennyFace\obj\Debug\LennyFace.csproj.GenerateResource.Cache
+c:\users\alex\source\repos\LennyFace\LennyFace\obj\Debug\LennyFace.Forms.AboutForm.resources
+c:\users\alex\source\repos\LennyFace\LennyFace\bin\Debug\Newtonsoft.Json.dll
+c:\users\alex\source\repos\LennyFace\LennyFace\bin\Debug\Newtonsoft.Json.xml
