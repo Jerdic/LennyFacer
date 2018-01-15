@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("LennyFace")]
-[assembly: AssemblyDescription("Easily copy and paste lenny faces!")]
+[assembly: AssemblyDescription("Easily copy and paste Lenny Faces!")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Jerdic")]
 [assembly: AssemblyProduct("LennyFace")]

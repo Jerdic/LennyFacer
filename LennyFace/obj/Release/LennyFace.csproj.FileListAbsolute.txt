@@ -1,5 +1,3 @@
-c:\users\alex\source\repos\LennyFace\LennyFace\bin\Release\LennyFace.exe
-c:\users\alex\source\repos\LennyFace\LennyFace\bin\Release\LennyFace.pdb
 c:\users\alex\source\repos\LennyFace\LennyFace\bin\Release\Newtonsoft.Json.dll
 c:\users\alex\source\repos\LennyFace\LennyFace\bin\Release\Newtonsoft.Json.xml
 c:\users\alex\source\repos\LennyFace\LennyFace\obj\Release\LennyFace.csprojResolveAssemblyReference.cache
@@ -7,5 +5,15 @@ c:\users\alex\source\repos\LennyFace\LennyFace\obj\Release\LennyFace.Forms.About
 c:\users\alex\source\repos\LennyFace\LennyFace\obj\Release\LennyFace.Properties.Resources.resources
 c:\users\alex\source\repos\LennyFace\LennyFace\obj\Release\LennyFace.csproj.GenerateResource.Cache
 c:\users\alex\source\repos\LennyFace\LennyFace\obj\Release\LennyFace.csproj.CoreCompileInputs.cache
-c:\users\alex\source\repos\LennyFace\LennyFace\obj\Release\LennyFace.exe
-c:\users\alex\source\repos\LennyFace\LennyFace\obj\Release\LennyFace.pdb
+c:\users\alex\source\repos\LennyFace\LennyFace\bin\Release\LennyFacer.exe
+c:\users\alex\source\repos\LennyFace\LennyFace\bin\Release\LennyFacer.pdb
+c:\users\alex\source\repos\LennyFace\LennyFace\bin\Release\LennyFacer.Common.dll
+c:\users\alex\source\repos\LennyFace\LennyFace\bin\Release\updater.exe
+c:\users\alex\source\repos\LennyFace\LennyFace\bin\Release\DotNetZip.dll
+c:\users\alex\source\repos\LennyFace\LennyFace\bin\Release\LennyFacer.Common.pdb
+c:\users\alex\source\repos\LennyFace\LennyFace\bin\Release\updater.pdb
+c:\users\alex\source\repos\LennyFace\LennyFace\bin\Release\DotNetZip.xml
+c:\users\alex\source\repos\LennyFace\LennyFace\obj\Release\LennyFace.Forms.NewVersionForm.resources
+c:\users\alex\source\repos\LennyFace\LennyFace\obj\Release\LennyFace.Forms.UpdateInfoCreatorForm.resources
+c:\users\alex\source\repos\LennyFace\LennyFace\obj\Release\LennyFacer.exe
+c:\users\alex\source\repos\LennyFace\LennyFace\obj\Release\LennyFacer.pdb

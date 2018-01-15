@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LennyFace", "LennyFace\LennyFace.csproj", "{B9A51179-CF07-4328-A1BC-1AFCD9CB84C9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LennyFacer.Common", "LennyFacer.Common\LennyFacer.Common.csproj", "{32D281E1-18D4-4C99-8F98-C5CE28448028}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LennyFacer.Updater", "LennyFacer.Updater\LennyFacer.Updater.csproj", "{D441739B-DDC2-42EF-BBD2-909C4F6C24C1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{B9A51179-CF07-4328-A1BC-1AFCD9CB84C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9A51179-CF07-4328-A1BC-1AFCD9CB84C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9A51179-CF07-4328-A1BC-1AFCD9CB84C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32D281E1-18D4-4C99-8F98-C5CE28448028}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32D281E1-18D4-4C99-8F98-C5CE28448028}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32D281E1-18D4-4C99-8F98-C5CE28448028}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32D281E1-18D4-4C99-8F98-C5CE28448028}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D441739B-DDC2-42EF-BBD2-909C4F6C24C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D441739B-DDC2-42EF-BBD2-909C4F6C24C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D441739B-DDC2-42EF-BBD2-909C4F6C24C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D441739B-DDC2-42EF-BBD2-909C4F6C24C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

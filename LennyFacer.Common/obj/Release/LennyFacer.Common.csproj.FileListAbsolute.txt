@@ -1,0 +1,7 @@
+c:\users\alex\source\repos\LennyFace\LennyFacer.Common\bin\Release\LennyFacer.Common.dll
+c:\users\alex\source\repos\LennyFace\LennyFacer.Common\bin\Release\LennyFacer.Common.pdb
+c:\users\alex\source\repos\LennyFace\LennyFacer.Common\bin\Release\Newtonsoft.Json.dll
+c:\users\alex\source\repos\LennyFace\LennyFacer.Common\bin\Release\Newtonsoft.Json.xml
+c:\users\alex\source\repos\LennyFace\LennyFacer.Common\obj\Release\LennyFacer.Common.csproj.CoreCompileInputs.cache
+c:\users\alex\source\repos\LennyFace\LennyFacer.Common\obj\Release\LennyFacer.Common.dll
+c:\users\alex\source\repos\LennyFace\LennyFacer.Common\obj\Release\LennyFacer.Common.pdb

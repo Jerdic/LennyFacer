@@ -1,0 +1,12 @@
+c:\users\alex\source\repos\LennyFace\LennyFacer.Updater\bin\Release\updater.exe
+c:\users\alex\source\repos\LennyFace\LennyFacer.Updater\bin\Release\updater.pdb
+c:\users\alex\source\repos\LennyFace\LennyFacer.Updater\bin\Release\DotNetZip.dll
+c:\users\alex\source\repos\LennyFace\LennyFacer.Updater\bin\Release\LennyFacer.Common.dll
+c:\users\alex\source\repos\LennyFace\LennyFacer.Updater\bin\Release\Newtonsoft.Json.dll
+c:\users\alex\source\repos\LennyFace\LennyFacer.Updater\bin\Release\LennyFacer.Common.pdb
+c:\users\alex\source\repos\LennyFace\LennyFacer.Updater\bin\Release\DotNetZip.xml
+c:\users\alex\source\repos\LennyFace\LennyFacer.Updater\bin\Release\Newtonsoft.Json.xml
+c:\users\alex\source\repos\LennyFace\LennyFacer.Updater\obj\Release\LennyFacer.Updater.csprojResolveAssemblyReference.cache
+c:\users\alex\source\repos\LennyFace\LennyFacer.Updater\obj\Release\LennyFacer.Updater.csproj.CoreCompileInputs.cache
+c:\users\alex\source\repos\LennyFace\LennyFacer.Updater\obj\Release\updater.exe
+c:\users\alex\source\repos\LennyFace\LennyFacer.Updater\obj\Release\updater.pdb

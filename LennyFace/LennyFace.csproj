@@ -5,9 +5,9 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{B9A51179-CF07-4328-A1BC-1AFCD9CB84C9}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>LennyFace</RootNamespace>
-    <AssemblyName>LennyFace</AssemblyName>
+    <AssemblyName>LennyFacer</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -33,6 +33,9 @@
   <PropertyGroup>
     <ApplicationIcon>Resources\lenny-outline-ico.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net35\Newtonsoft.Json.dll</HintPath>
@@ -54,6 +57,18 @@
     <Compile Include="Forms\AboutForm.Designer.cs">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\NewVersionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NewVersionForm.Designer.cs">
+      <DependentUpon>NewVersionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UpdateInfoCreatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UpdateInfoCreatorForm.Designer.cs">
+      <DependentUpon>UpdateInfoCreatorForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Localization.cs" />
     <Compile Include="LennyFacer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -67,6 +82,12 @@
     <EmbeddedResource Include="Forms\AboutForm.resx">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NewVersionForm.resx">
+      <DependentUpon>NewVersionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UpdateInfoCreatorForm.resx">
+      <DependentUpon>UpdateInfoCreatorForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -76,6 +97,16 @@
     <Content Include="Resources\lenny-outline-ico.ico" />
     <None Include="packages.config" />
     <None Include="Resources\lenny-outline-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LennyFacer.Common\LennyFacer.Common.csproj">
+      <Project>{32d281e1-18d4-4c99-8f98-c5ce28448028}</Project>
+      <Name>LennyFacer.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LennyFacer.Updater\LennyFacer.Updater.csproj">
+      <Project>{d441739b-ddc2-42ef-bbd2-909c4f6c24c1}</Project>
+      <Name>LennyFacer.Updater</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

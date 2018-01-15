@@ -1,11 +1,15 @@
 ﻿using System;
 using System.IO;
+using System.Diagnostics;
 using System.Windows.Forms;
 using System.Collections.Generic;
 
 using Microsoft.Win32;
 
+using Newtonsoft.Json;
+
 using LennyFace.Forms;
+using LennyFace.Common;
 
 namespace LennyFace {
     /// <summary>
@@ -18,8 +22,15 @@ namespace LennyFace {
         /// </summary>
         public static readonly string[] faces = new string[] { "( ͡° ͜ʖ ͡°)", "(ಥ ͜ʖಥ)", "(° ͜ʖ°)", "(͡o‿O͡)" };
 
+        public static readonly string updateDataPath = $@"update.lenny";
         public static readonly string dataPath = $@"{Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData)}\lenny";
         public static readonly string runKey = @"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run";
+        public static readonly string updateInfoURL = "https://raw.githubusercontent.com/Jerdic/UpdateData/master/LennyFacer/current.lenny";
+
+        public static readonly int versionNumber = 2;
+        public static readonly string versionDisplay = "1.1";
+
+        public static UpdateInfo currentVersion;
 
         public static NotifyIcon tray;
 
@@ -29,9 +40,11 @@ namespace LennyFace {
         /// <param name="args"></param>
         [STAThread]
         private static void Main(string[] args) {
+#if DEBUG
             Console.Title = "Lenny Face";
+#endif
 
-            Console.WriteLine("LennyFace");
+            Console.WriteLine($"LennyFace | Version: {versionNumber.ToString()}");
             Console.WriteLine("Copyright (c) 2017-2018 Jerdic, All rights reserved.\n");
 
             Console.WriteLine($"Running from {Application.ExecutablePath}.");
@@ -42,11 +55,19 @@ namespace LennyFace {
 
             HandleConfig();
 
+            Console.WriteLine("Checking for updates...");
+            CheckForUpdates(silent: false);
+
             SetupTray();
 
             Application.Run();
 
             //Console.ReadKey();
+        }
+
+        public static void Exit() {
+            tray.Visible = false;
+            Application.Exit();
         }
 
         /// <summary>
@@ -66,6 +87,54 @@ namespace LennyFace {
         }
 
         /// <summary>
+        /// Check for updates.
+        /// </summary>
+        public static void CheckForUpdates(bool silent = false) {
+            Console.WriteLine("Checking for updates...");
+
+            /*WebClient client = new WebClient();
+            Stream stream = client.OpenRead(updateInfoURL);
+            StreamReader reader = new StreamReader(stream);
+            String content = reader.ReadToEnd();*/
+
+            string content = ServerUtil.GetUpdateInfoJson();
+
+            Console.WriteLine(content);
+
+            UpdateInfo updateInfo = JsonConvert.DeserializeObject<UpdateInfo>(content);
+
+            if (updateInfo.versionNumber != versionNumber) { //There's a new version.
+                DialogResult choice = MessageBox.Show($"A new version of Lenny Facer has been released!\n\nThe latest version is "
+                    + $"{GetVersionDisplay(updateInfo.versionDisplay)}, you have {GetVersionDisplay(versionDisplay)}.\nWould you like to install this update?",
+                    "Lenny Facer", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+
+                switch (choice) {
+                    case DialogResult.Yes:
+                        //TODO: Launch updater.
+                        Console.WriteLine("User chose to update.");
+
+                        Process.Start("updater.exe");
+                        Exit();
+                        break;
+                    case DialogResult.No:
+                        Console.WriteLine("User chose not to install update.");
+                        break;
+                }
+            } else {
+                if (!silent) MessageBox.Show("You have the latest version.", "Lenny Facer");
+            }
+        }
+
+        /// <summary>
+        /// Formats version displays properly.
+        /// </summary>
+        /// <param name="versionDisplay"></param>
+        /// <returns></returns>
+        public static string GetVersionDisplay(string versionDisplay) {
+            return $"v{versionDisplay}";
+        }
+
+        /// <summary>
         /// Ensures the main directory exists.
         /// </summary>
         public static void EnsureMainDirectoryExists() {
@@ -79,7 +148,7 @@ namespace LennyFace {
             Console.WriteLine("Creating tray icon...");
 
             tray = new NotifyIcon {
-                Text = "TestApp",
+                Text = "Lenny Facer",
                 Icon = Properties.Resources.lenny_outline_ico /*new Icon("lic")*/ /*new Icon(SystemIcons.Application, 40, 40)*/
             };
 
@@ -95,14 +164,17 @@ namespace LennyFace {
             trayMenu.MenuItems.Add("-");
 
 #if DEBUG
+            AddToTray(trayMenu, "Create Update Info");
             AddToTray(trayMenu, "Save Config");
             AddToTray(trayMenu, "Load Config");
             trayMenu.MenuItems.Add("-");
 #endif
 
-            AddToTray(trayMenu, "Run at start-up?"); //This has to be hard-coded because of C# limitations! :D
-            AddToTray(trayMenu, "About"); //This has to be hard-coded because of C# limitations! :D
-            AddToTray(trayMenu, "Quit"); //This has to be hard-coded because of C# limitations! :D
+            //This has to be hard-coded because of C# limitations! :D
+            AddToTray(trayMenu, "Run at start-up?");
+            AddToTray(trayMenu, "Check for updates");
+            AddToTray(trayMenu, "About"); 
+            AddToTray(trayMenu, "Quit");
 
             //trayMenu.MenuItems.Add("Blah", Tray_lennyFaceClicked);
             //trayMenu.MenuItems.Add("Blah2", Tray_lennyFaceClicked);
@@ -137,6 +209,9 @@ namespace LennyFace {
             //string quitText = Localization.GetString("option_quit");
 
             switch (text) { //Thanks to the mighty fine limitations of C#, these strings have to be hard-coded! YAY!
+                case "Check for updates":
+                    CheckForUpdates();
+                    break;
                 case "Run at start-up?":
                     //Ask the user what they want to do.
                     DialogResult result = MessageBox.Show("Would you like Lenny Facer to run at start-up for this account?", "Lenny Facer",
@@ -162,11 +237,13 @@ namespace LennyFace {
                     Console.WriteLine("Showing about form...");
                     new AboutForm().Show();
                     break;
-                case "Quit": 
-                    tray.Visible = false;
-                    Application.Exit();
+                case "Quit":
+                    Exit();
                     break;
 #if DEBUG
+                case "Create Update Info":
+                    new UpdateInfoCreatorForm().Show();
+                    break;
                 case "Save Config":
                     Configuration.config.Save();
                     break;
