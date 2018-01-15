@@ -10,3 +10,6 @@ c:\users\alex\source\repos\LennyFace\LennyFacer.Updater\obj\Debug\LennyFacer.Upd
 c:\users\alex\source\repos\LennyFace\LennyFacer.Updater\obj\Debug\LennyFacer.Updater.csproj.CoreCompileInputs.cache
 c:\users\alex\source\repos\LennyFace\LennyFacer.Updater\obj\Debug\updater.exe
 c:\users\alex\source\repos\LennyFace\LennyFacer.Updater\obj\Debug\updater.pdb
+c:\users\alex\source\repos\LennyFace\LennyFacer.Updater\obj\Debug\LennyFace.Updater.UpdateFailedForm.resources
+c:\users\alex\source\repos\LennyFace\LennyFacer.Updater\obj\Debug\LennyFace.Updater.InfoForm.resources
+c:\users\alex\source\repos\LennyFace\LennyFacer.Updater\obj\Debug\LennyFacer.Updater.csproj.GenerateResource.Cache

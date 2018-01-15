@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Threading;
 using System.Diagnostics;
 using System.Windows.Forms;
 using System.Collections.Generic;
@@ -20,15 +21,18 @@ namespace LennyFace {
         /// <summary>
         /// Database that contains all the faces.
         /// </summary>
-        public static readonly string[] faces = new string[] { "( ͡° ͜ʖ ͡°)", "(ಥ ͜ʖಥ)", "(° ͜ʖ°)", "(͡o‿O͡)" };
+        public static readonly string[] faces = new string[] { "( ͡° ͜ʖ ͡°)", "(ಥ ͜ʖಥ)", "(° ͜ʖ°)", "(͡o‿O͡)", "(⌐▀͡ ̯ʖ▀)", "(̿▀̿ ̿Ĺ̯̿̿▀̿ ̿)̄",
+            @"̿̿ ̿̿ ̿̿ ̿'̿'\̵͇̿̿\з= ( ▀ ͜͞ʖ▀) =ε/̵͇̿̿/’̿’̿ ̿ ̿̿ ̿̿ ̿̿", "ヽ(͡◕ ͜ʖ ͡◕)ﾉ" };
 
         public static readonly string updateDataPath = $@"update.lenny";
         public static readonly string dataPath = $@"{Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData)}\lenny";
         public static readonly string runKey = @"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run";
         public static readonly string updateInfoURL = "https://raw.githubusercontent.com/Jerdic/UpdateData/master/LennyFacer/current.lenny";
 
-        public static readonly int versionNumber = 2;
-        public static readonly string versionDisplay = "1.1";
+        public static Thread checkForUpdatesThread;
+
+        public static readonly int versionNumber = 5;
+        public static readonly string versionDisplay = "1.3";
 
         public static UpdateInfo currentVersion;
 
@@ -40,10 +44,6 @@ namespace LennyFace {
         /// <param name="args"></param>
         [STAThread]
         private static void Main(string[] args) {
-#if DEBUG
-            Console.Title = "Lenny Face";
-#endif
-
             Console.WriteLine($"LennyFace | Version: {versionNumber.ToString()}");
             Console.WriteLine("Copyright (c) 2017-2018 Jerdic, All rights reserved.\n");
 
@@ -56,7 +56,10 @@ namespace LennyFace {
             HandleConfig();
 
             Console.WriteLine("Checking for updates...");
-            CheckForUpdates(silent: false);
+            CheckForUpdates(silent: true);
+
+            checkForUpdatesThread = new Thread(CheckForUpdatesThread);
+            checkForUpdatesThread.Start();
 
             SetupTray();
 
@@ -65,8 +68,24 @@ namespace LennyFace {
             //Console.ReadKey();
         }
 
+        /// <summary>
+        /// Check for updates thread.
+        /// </summary>
+        public static void CheckForUpdatesThread() {
+            Console.WriteLine("Starting update checking thread...");
+
+            while (true) {
+                Thread.Sleep(300000);
+                CheckForUpdates(silent: true);
+            }
+        }
+
+        /// <summary>
+        /// Exits the application.
+        /// </summary>
         public static void Exit() {
             tray.Visible = false;
+            checkForUpdatesThread.Abort();
             Application.Exit();
         }
 

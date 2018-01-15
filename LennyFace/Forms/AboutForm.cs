@@ -35,5 +35,9 @@ namespace LennyFace.Forms {
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) {
             OpenUrl("https://www.youtube.com/DJMANOfficial");
         }
+
+        private void AboutForm_Load(object sender, EventArgs e) {
+            versionLabel.Text = LennyFacer.GetVersionDisplay(LennyFacer.versionDisplay);
+        }
     }
 }

@@ -33,6 +33,7 @@
             this.jerdicWebsiteLink = new System.Windows.Forms.LinkLabel();
             this.jerdicYoutubeLink = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.versionLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.lennyFacerIcon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -40,7 +41,7 @@
             // 
             this.lennyFacerIcon.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lennyFacerIcon.Image = global::LennyFace.Properties.Resources.lenny_outline_png;
-            this.lennyFacerIcon.Location = new System.Drawing.Point(0, 5);
+            this.lennyFacerIcon.Location = new System.Drawing.Point(0, 3);
             this.lennyFacerIcon.Name = "lennyFacerIcon";
             this.lennyFacerIcon.Size = new System.Drawing.Size(222, 215);
             this.lennyFacerIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -49,20 +50,20 @@
             // 
             // titleText
             // 
-            this.titleText.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.titleText.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.titleText.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titleText.Location = new System.Drawing.Point(222, 8);
+            this.titleText.Location = new System.Drawing.Point(185, 6);
             this.titleText.Name = "titleText";
             this.titleText.Size = new System.Drawing.Size(421, 52);
             this.titleText.TabIndex = 1;
-            this.titleText.Text = "LennyFacer";
+            this.titleText.Text = "Lenny Facer";
             this.titleText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // sloganText
             // 
-            this.sloganText.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.sloganText.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.sloganText.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sloganText.Location = new System.Drawing.Point(220, 53);
+            this.sloganText.Location = new System.Drawing.Point(183, 51);
             this.sloganText.Name = "sloganText";
             this.sloganText.Size = new System.Drawing.Size(421, 24);
             this.sloganText.TabIndex = 1;
@@ -71,9 +72,9 @@
             // 
             // copyrightText
             // 
-            this.copyrightText.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.copyrightText.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.copyrightText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.copyrightText.Location = new System.Drawing.Point(220, 79);
+            this.copyrightText.Location = new System.Drawing.Point(183, 77);
             this.copyrightText.Name = "copyrightText";
             this.copyrightText.Size = new System.Drawing.Size(421, 24);
             this.copyrightText.TabIndex = 1;
@@ -83,7 +84,7 @@
             // closeButton
             // 
             this.closeButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.closeButton.Location = new System.Drawing.Point(559, 194);
+            this.closeButton.Location = new System.Drawing.Point(504, 189);
             this.closeButton.Name = "closeButton";
             this.closeButton.Size = new System.Drawing.Size(75, 23);
             this.closeButton.TabIndex = 2;
@@ -93,8 +94,8 @@
             // 
             // jerdicTwitterLink
             // 
-            this.jerdicTwitterLink.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.jerdicTwitterLink.Location = new System.Drawing.Point(223, 121);
+            this.jerdicTwitterLink.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.jerdicTwitterLink.Location = new System.Drawing.Point(186, 119);
             this.jerdicTwitterLink.Name = "jerdicTwitterLink";
             this.jerdicTwitterLink.Size = new System.Drawing.Size(418, 19);
             this.jerdicTwitterLink.TabIndex = 3;
@@ -106,8 +107,8 @@
             // 
             // djmanTwitterLink
             // 
-            this.djmanTwitterLink.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.djmanTwitterLink.Location = new System.Drawing.Point(223, 155);
+            this.djmanTwitterLink.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.djmanTwitterLink.Location = new System.Drawing.Point(186, 153);
             this.djmanTwitterLink.Name = "djmanTwitterLink";
             this.djmanTwitterLink.Size = new System.Drawing.Size(418, 19);
             this.djmanTwitterLink.TabIndex = 3;
@@ -119,8 +120,8 @@
             // 
             // jerdicWebsiteLink
             // 
-            this.jerdicWebsiteLink.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.jerdicWebsiteLink.Location = new System.Drawing.Point(223, 104);
+            this.jerdicWebsiteLink.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.jerdicWebsiteLink.Location = new System.Drawing.Point(186, 102);
             this.jerdicWebsiteLink.Name = "jerdicWebsiteLink";
             this.jerdicWebsiteLink.Size = new System.Drawing.Size(418, 19);
             this.jerdicWebsiteLink.TabIndex = 3;
@@ -132,8 +133,8 @@
             // 
             // jerdicYoutubeLink
             // 
-            this.jerdicYoutubeLink.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.jerdicYoutubeLink.Location = new System.Drawing.Point(223, 138);
+            this.jerdicYoutubeLink.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.jerdicYoutubeLink.Location = new System.Drawing.Point(186, 136);
             this.jerdicYoutubeLink.Name = "jerdicYoutubeLink";
             this.jerdicYoutubeLink.Size = new System.Drawing.Size(418, 19);
             this.jerdicYoutubeLink.TabIndex = 3;
@@ -145,8 +146,8 @@
             // 
             // linkLabel1
             // 
-            this.linkLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.linkLabel1.Location = new System.Drawing.Point(223, 171);
+            this.linkLabel1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.linkLabel1.Location = new System.Drawing.Point(186, 169);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(418, 19);
             this.linkLabel1.TabIndex = 3;
@@ -156,12 +157,24 @@
             this.linkLabel1.VisitedLinkColor = System.Drawing.Color.Blue;
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // versionLabel
+            // 
+            this.versionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.versionLabel.Location = new System.Drawing.Point(3, 200);
+            this.versionLabel.Name = "versionLabel";
+            this.versionLabel.Size = new System.Drawing.Size(293, 18);
+            this.versionLabel.TabIndex = 4;
+            this.versionLabel.Text = "Version Text";
+            this.versionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // AboutForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(641, 223);
+            this.ClientSize = new System.Drawing.Size(586, 218);
             this.ControlBox = false;
+            this.Controls.Add(this.versionLabel);
+            this.Controls.Add(this.lennyFacerIcon);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.djmanTwitterLink);
             this.Controls.Add(this.jerdicWebsiteLink);
@@ -171,7 +184,6 @@
             this.Controls.Add(this.copyrightText);
             this.Controls.Add(this.sloganText);
             this.Controls.Add(this.titleText);
-            this.Controls.Add(this.lennyFacerIcon);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -181,6 +193,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "About";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.AboutForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.lennyFacerIcon)).EndInit();
             this.ResumeLayout(false);
 
@@ -198,5 +211,6 @@
         private System.Windows.Forms.LinkLabel jerdicWebsiteLink;
         private System.Windows.Forms.LinkLabel jerdicYoutubeLink;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Label versionLabel;
     }
 }
